@@ -31,7 +31,7 @@
 
 
 
-## 2. 使い方（How to run）
+## 2. 使い方
 
 ### 環境構築手順
 
@@ -65,13 +65,13 @@ pip install -r requirements.txt
 
 ・APIキーはOpenRouterの公式サイトから取得する。
 
-・取得したAPIキーをプロジェクト直下の`.env`に設定する。
+・取得したAPIキーをプロジェクト直下の.envに設定する。
 
 
 OPENROUTER_API_KEY=自分のAPIキー
 
 
-・APIキーはソースコードに直接記述せず、`.env`で管理する。
+・APIキーはソースコードに直接記述せず、.envで管理する。
 
 .envは.gitignoreに登録し、GitHubなどへ公開しない。
 
