@@ -28,6 +28,9 @@ def main():
 
     print("-" * 60)
 
+
+
+#検索でヒットした内容を一つずつ表示
     print("Sources:")
     for i, s in enumerate(result["sources"], start=1):
         print(f"  [{i}] {s['id']} (distance={s['distance']:.4f})")

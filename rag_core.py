@@ -167,9 +167,9 @@ def search_docs(
     print("検出したポジション:", detected_position)
     print("検出した選手:", detected_players)
 
-    # ==================================================
-    # ① チーム＋ポジションの一覧検索
-    # ==================================================
+    
+    # チーム＋ポジションの一覧検索
+    
 
     if detected_team and detected_position:
 
@@ -210,10 +210,9 @@ def search_docs(
 
         return hits
 
-    # ==================================================
-    # ② 選手名が指定されている場合
-    # ==================================================
-
+  
+    #選手名が指定されている場合
+   
     if detected_players:
 
         hits = []
@@ -246,10 +245,7 @@ def search_docs(
 
         return hits
 
-    # ==================================================
-    # ③ 通常のEmbedding検索
-    # ==================================================
-
+    
     results = collection.query(
         query_embeddings=[q_emb],
         n_results=n_results
