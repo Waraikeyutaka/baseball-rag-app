@@ -65,7 +65,7 @@ for msg in st.session_state["history"]:
         if msg["role"] == "assistant" and "sources" in msg:
 
             with st.expander(
-                f"📚 出典（NPB公式情報・{len(msg['sources'])} 件）"
+                f" 出典（NPB公式情報・{len(msg['sources'])} 件）"
             ):
 
                 for i, s in enumerate(
