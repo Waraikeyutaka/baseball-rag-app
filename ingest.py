@@ -2,9 +2,6 @@
 
 # baseball-rag-app/ingest.py
 
-
-
-import re
 import os
 import sys
 from pathlib import Path
@@ -15,6 +12,7 @@ from openai import OpenAI
 
 load_dotenv()
 
+#初期設定と API クライアント作成
 API_KEY = os.getenv("OPENROUTER_API_KEY")
 BASE_URL = os.getenv("OPENROUTER_BASE_URL", "https://openrouter.ai/api/v1") 
 EMBED_MODEL = os.getenv("OPENROUTER_EMBED_MODEL", "openai/text-embedding-3-small") 
@@ -74,6 +72,7 @@ if not md_files:
  
 all_ids, all_docs, all_meta = [], [], [] 
 
+#メタデータの抽出とチャンクの構築
 for md in md_files:
 
     raw = md.read_text(encoding="utf-8")
